@@ -1,0 +1,33 @@
+{
+    "name": "nwby/namebox",
+    "description": "Random company name generator.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "NWBY",
+            "email": "sam.newby19@gmail.com"
+        }
+    ],
+    "require": {
+        "fzaninotto/faker": "^1.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "NWBY\\Namebox\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "NWBY\\Namebox\\NameboxServiceProvider"
+            ],
+            "aliases": {
+                "Namebox": "NWBY\\Namebox\\Facades\\Namebox"
+            }
+        }
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.5"
+    }
+}
