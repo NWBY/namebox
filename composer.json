@@ -3,12 +3,11 @@
     "description": "Random company name generator.",
     "type": "library",
     "license": "MIT",
-    "authors": [
-        {
-            "name": "NWBY",
-            "email": "sam.newby19@gmail.com"
-        }
-    ],
+    "authors": [{
+        "name": "NWBY",
+        "email": "sam.newby19@gmail.com"
+    }],
+    "minimum-stability": "stable",
     "require": {
         "fzaninotto/faker": "^1.9"
     },
