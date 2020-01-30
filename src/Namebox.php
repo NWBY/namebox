@@ -2,14 +2,12 @@
 
 namespace NWBY\Namebox;
 
-use Faker\Factory as Faker;
+use function PHPSTORM_META\map;
 
 class Namebox
 {
     public function __construct()
     {
-        $faker = Faker::create();
-        $this->faker = $faker;
     }
 
     public function generate()
@@ -50,9 +48,83 @@ class Namebox
         return $suffixes[mt_rand(0, count($suffixes) - 1)];
     }
 
+    protected function getPrefix()
+    {
+        $prefixes = [
+            'One',
+            'Build',
+            'Grey',
+            'IQ',
+            'Insp',
+            'Moon',
+            'Un',
+            'White',
+            'take',
+            'light',
+            'Peak',
+            'Me',
+            'at',
+            'ren',
+            'comp',
+            'Mark',
+            'down'
+        ];
+
+        return $prefixes[mt_rand(0, count($prefixes) - 1)];
+    }
+
     protected function getWord()
     {
-        return $this->faker->word;
+        $words = [
+            'Build',
+            'Only',
+            'Heat',
+            'Tech',
+            'Gray',
+            'Grey',
+            'Open',
+            'Start',
+            'Central',
+            'Innovate',
+            'Spring',
+            'New',
+            'Sight',
+            'Light',
+            'House',
+            'Bring',
+            'Different',
+            'Team',
+            'Phone',
+            'Reduce',
+            'Stage',
+            'Pack',
+            'Code',
+            'User',
+            'Interface',
+            'String',
+            'Integer',
+            'Block',
+            'Chain',
+            'Move',
+            'Table',
+            'Computer',
+            'One',
+            'Ten',
+            'Blue',
+            'Clue',
+            'Black',
+            'Technology',
+            'Site',
+            'Luxe',
+            'Inspire',
+            'Analytic',
+            'Truth',
+            'Matrix',
+            'Peak',
+            'Infinite',
+        ];
+
+        return $words[mt_rand(0, count($words) - 1)];
     }
 
     protected function getBusiness()

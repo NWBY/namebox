@@ -9,7 +9,6 @@
     }],
     "minimum-stability": "stable",
     "require": {
-        "fzaninotto/faker": "^1.9"
     },
     "autoload": {
         "psr-4": {

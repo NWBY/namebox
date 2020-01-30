@@ -11,20 +11,12 @@ class ComposerStaticInit450c33720e70e938a3a7398434d2d5e7
         array (
             'NWBY\\Namebox\\' => 13,
         ),
-        'F' => 
-        array (
-            'Faker\\' => 6,
-        ),
     );
 
     public static $prefixDirsPsr4 = array (
         'NWBY\\Namebox\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
-        ),
-        'Faker\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker',
         ),
     );
 

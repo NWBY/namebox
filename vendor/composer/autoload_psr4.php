@@ -7,5 +7,4 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'NWBY\\Namebox\\' => array($baseDir . '/src'),
-    'Faker\\' => array($vendorDir . '/fzaninotto/faker/src/Faker'),
 );
