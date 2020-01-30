@@ -13,12 +13,12 @@ class Namebox
     public function generate()
     {
         $suffix = $this->getSuffix();
+        $prefix = $this->getPrefix();
         $word = $this->getWord();
-        $business = $this->getBusiness();
 
         $names = [
             $word . $suffix,
-            $business . $suffix
+            $prefix . $word
         ];
 
         return $names[mt_rand(0, count($names) - 1)];
@@ -125,10 +125,5 @@ class Namebox
         ];
 
         return $words[mt_rand(0, count($words) - 1)];
-    }
-
-    protected function getBusiness()
-    {
-        return $this->faker->company;
     }
 }
