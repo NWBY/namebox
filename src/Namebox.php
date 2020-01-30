@@ -2,11 +2,14 @@
 
 namespace NWBY\Namebox;
 
+use Faker\Factory as Faker;
+
 class Namebox
 {
     public function __construct()
     {
-        $this->faker = Faker\Factory::create();
+        $faker = Faker::create();
+        $this->faker = $faker;
     }
 
     public function generate()
