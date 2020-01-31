@@ -24,6 +24,44 @@ class Namebox
         return $names[mt_rand(0, count($names) - 1)];
     }
 
+    public function generateFive()
+    {
+        $names = [];
+
+        for ($i = 0; $i < 5; $i++) {
+            if ($i % 2 == 0) {
+                $prefix = $this->getPrefix();
+                $word = $this->getWord();
+                $names[] = $prefix . $word;
+            } else {
+                $suffix = $this->getSuffix();
+                $word = $this->getWord();
+                $names[] = $word . $suffix;
+            }
+        }
+
+        return $names;
+    }
+
+    public function getTen()
+    {
+        $names = [];
+
+        for ($i = 0; $i < 10; $i++) {
+            if ($i % 2 == 0) {
+                $prefix = $this->getPrefix();
+                $word = $this->getWord();
+                $names[] = $prefix . $word;
+            } else {
+                $suffix = $this->getSuffix();
+                $word = $this->getWord();
+                $names[] = $word . $suffix;
+            }
+        }
+
+        return $names;
+    }
+
     protected function getSuffix()
     {
         $suffixes = [
@@ -43,6 +81,15 @@ class Namebox
             'tech',
             'AI',
             'gen',
+            'rian',
+            'ian',
+            'place',
+            'ply',
+            'Uni',
+            'Code',
+            'Spl',
+            'Ply',
+            'Suf'
         ];
 
         return $suffixes[mt_rand(0, count($suffixes) - 1)];
@@ -67,7 +114,16 @@ class Namebox
             'ren',
             'comp',
             'Mark',
-            'down'
+            'down',
+            'Ply',
+            'Veni',
+            'Ale',
+            'Force',
+            'Tor',
+            'Zor',
+            'Speed',
+            'X',
+            'x'
         ];
 
         return $prefixes[mt_rand(0, count($prefixes) - 1)];
@@ -122,6 +178,18 @@ class Namebox
             'Matrix',
             'Peak',
             'Infinite',
+            'Force',
+            'Katen',
+            'Keen',
+            'Till',
+            'Key',
+            'Air',
+            'Red',
+            'Pyth',
+            'Runner',
+            'Channel',
+            'Ten',
+            'Direct'
         ];
 
         return $words[mt_rand(0, count($words) - 1)];
